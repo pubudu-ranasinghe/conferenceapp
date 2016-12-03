@@ -25,12 +25,6 @@
     </div><br/>
     <input type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="Login" onClick="pasuser(this.form)">
     </form> 
-        
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
-  </div>
 </div>
     
     
@@ -46,14 +40,8 @@
 <script language="javascript">
 function pasuser(form) {
    
-        if(form.id.value=="s01"){
-            window.location="C:/xampp/htdocs/bethem/index.html";
-        }else if(form.id.value=="a01"){
-            window.location="C:/xampp/htdocs/bethem/index.html";
-        }else if(form.id.value=="s02"){
-            window.location="C:/xampp/htdocs/bethem/index.html";
-        }else if(form.id.value=="a02"){
-            window.location="C:/xampp/htdocs/bethem/index.html";
+        if(form.id.value=="s01" || form.id.value=="a01" || form.id.value=="s02" || form.id.value=="a02"){
+            window.location="Agenda.html";
         }else {  
             alert("Invalid UserID")
         }
