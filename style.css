@@ -5,3 +5,7 @@
 .card-content span {
 	color: #aaa;
 }
+
+.fix-card  {
+	max-width: none;
+}
