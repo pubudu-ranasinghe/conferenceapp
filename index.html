@@ -44,7 +44,7 @@
                 </select>
               </div>
             </div>
-            <div class="col s12">
+            <div id="ques" class="col s12">
               <div class="card">
                 <div class="card-content">
                   <p>Hello, what did you mean by IaaS in your presentaion?</p>
@@ -67,6 +67,10 @@
                 <div class="card-content">
                   <p>Hello, what did you mean by IaaS in your presentaion?</p>
                   <span>Jane asked 14 minutes ago</span>
+                </div>
+                <div class="card-content" style="margin-left: 30px">
+                  <p>IaaS stands for Infrastructure as a Service</p>
+                  <span>Answered by Donald</span>
                 </div>
                 <div class="card-action">
                   <a href="#">1 Comment</a>
@@ -125,13 +129,13 @@
             <h4>Ask Question</h4>
             <!-- <div class="row"> -->
               <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <textarea id="question" class="materialize-textarea"></textarea>
                 <label for="textarea1">Type tour question here</label>
               </div>
             <!-- </div> -->
           </div>
           <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Post</a>
+            <a href="#!" id="postquestion" class=" modal-action modal-close waves-effect waves-green btn-flat">Post</a>
           </div>
         </div>
 
@@ -274,6 +278,12 @@ div.container {
           $('.modal').modal();
           $('select').material_select();
           $(".button-collapse").sideNav();
+        });
+
+        $('#postquestion').click(function () {
+          var t = $('#question').val();
+          // console.log(t);
+          $('#ques').append('<div class="card"><div class="card-content"><p>'+t+'</p><span>Jane asked 14 minutes ago</span></div><div class="card-action"><a href="#">1 Comment</a><a href="#">5 Votes</a><a href="#" class="waves-effect waves-light btn"><i class="material-icons left">add</i>vote</a></div></div>');
         });
       </script>
     </body>
