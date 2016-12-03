@@ -13,60 +13,100 @@
 
     <body>
       <div class="row">
-	    <div class="col s12 tab-bar">
-	      <ul class="tabs">
-	        <li class="tab col s3"><a class="active" href="#test1">Question</a></li>
-	        <li class="tab col s3"><a href="#test2">Q &amp; A</a></li>
-	        <li class="tab col s3"><a href="#test3">About</a></li>
-	        <li class="tab col s3"><a href="#test4">Leaderboard</a></li>
-	      </ul>
-	    </div>
-	    <div id="test1" class="col s12">
-	    	<div class="row">
-	    	<div class="input-field col s12">
-	          <textarea id="textarea1" class="materialize-textarea"></textarea>
-	          <label for="textarea1">Ask a Question</label>
-	          <a class="waves-effect waves-light btn">Post</a>
-	        </div>
-	        <div class="col s12 m6">
-	          <div class="card">
-	            <div class="card-content">
-	              <p>Hello, what did you mean by IaaS in your presentaion?</p>
-	            </div>
-	            <div class="card-action">
-	              <a href="#">3 Comments</a>
-	              <a href="#">10 Votes</a>
-	            </div>
-	          </div><!-- Q1 -->
-	          <div class="card">
-	            <div class="card-content">
-	              <p>Hello, what did you mean by IaaS in your presentaion?</p>
-	            </div>
-	            <div class="card-action">
-	              <a href="#">3 Comments</a>
-	              <a href="#">10 Votes</a>
-	            </div>
-	          </div><!-- Q2 -->
-	        </div>
-	      </div>
-	    </div><!-- Q1 -->
+        <nav class="nav-extended">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">#2 Cloud Technology</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="badges.html">Components</a></li>
+              <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="badges.html">Components</a></li>
+              <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
 
-	    <div id="modal1" class="modal">
-		    <div class="modal-content">
-		      <h4>Modal Header</h4>
-		      <p>A bunch of text</p>
-		    </div>
-		    <div class="modal-footer">
-		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-		    </div>
-		  </div>
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#test1">Question</a></li>
+              <li class="tab"><a href="#test2">Q&amp;A</a></li>
+              <li class="tab"><a href="#test3">Additional Reading</a></li>
+              <li class="tab"><a href="#test4">About Session</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div id="test1" class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected>Sort By</option>
+                  <option value="1">Votes</option>
+                  <option value="2">New</option>
+                  <option value="3">Old</option>
+                </select>
+              </div>
+            </div>
+            <div class="col s12">
+              <div class="card">
+                <div class="card-content">
+                  <p>Hello, what did you mean by IaaS in your presentaion?</p>
+                  <span>John asked 24 minutes ago</span>
+                </div>
+                <div class="card-action">
+                  <a href="#">3 Comments</a>
+                  <a href="#">10 Votes</a>
+                </div>
+              </div><!-- Q1 -->
+              <div class="card">
+                <div class="card-content">
+                  <p>Hello, what did you mean by IaaS in your presentaion?</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">3 Comments</a>
+                  <a href="#">10 Votes</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Modal Trigger -->
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large red" href="#modal1">
+            <i class="large material-icons modal-trigger">add</i>
+          </a>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Ask Question</h4>
+            <!-- <div class="row"> -->
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Type tour question here</label>
+              </div>
+            <!-- </div> -->
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Post</a>
+          </div>
+        </div>
 
-	    <div id="test2" class="col s12">Test 2</div>
-	    <div id="test3" class="col s12">Test 3</div>
-	    <div id="test4" class="col s12">Test 4</div>
-	  </div>
+        <div id="test2" class="col s12">Test 2</div>
+        <div id="test3" class="col s12">Test 3</div>
+        <div id="test4" class="col s12">Test 4</div>
+    </div>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+          $('.modal').modal();
+          $('select').material_select();
+        });
+      </script>
     </body>
   </html>
